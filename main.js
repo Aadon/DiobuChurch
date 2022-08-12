@@ -40,7 +40,8 @@ const workersSize = document.getElementById('wrk-size');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('#surprise');
-console.log(randomBtn)
+console.log(randomBtn);
+const div = document.querySelector('.underline')
 
 let currentItem = 0;
 
@@ -82,3 +83,19 @@ const surprise = () => {
     churrchInfo(currentItem);
     console.log(currentItem)
 };
+
+
+const myDate = () => {
+    let date = new Date();
+
+    const day = date.getDate();
+    const h = date.getHours();
+    const m = date.getMinutes();
+    const s = date.getSeconds();
+    
+    if (div.classList.contains('underline')) {
+        return div.textContent =  `${h} : ${m} : ${s}`;
+    };
+
+};
+setInterval(myDate, 1000);
