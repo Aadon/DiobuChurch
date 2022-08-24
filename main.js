@@ -46,13 +46,12 @@ const div = document.querySelector('.underline')
 let currentItem = 0;
 
 window.addEventListener('DOMContentLoaded', () => {
-    churrchInfo(currentItem)
-    console.log('shake and bake')
+    churrchInfo(currentItem);
 });
 
 const churrchInfo = (details) => {
     const item = diobuGroup[details];
-    districtName.textContent = item.districtName
+    districtName.textContent = item.districtName;
     pastor.textContent = item.pastor;
     congregationSize.textContent = item.congregationSize;
     workersSize.textContent = item.workersSize;
